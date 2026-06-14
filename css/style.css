@@ -1136,15 +1136,4 @@ margin:10px auto;
 .fitoterapia,
 .consultoria-box{
 
-    opacity:0;
-    transform:translateY(30px);
-    transition:all .6s ease;
-
-}
-
-.show{
-
-    opacity:1;
-    transform:translateY(0);
-
 }
