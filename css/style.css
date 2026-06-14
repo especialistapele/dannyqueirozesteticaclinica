@@ -1,0 +1,1150 @@
+/* =========================
+RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+line-height:1.7;
+color:#222;
+background:#ffffff;
+overflow-x:hidden;
+}
+
+/* =========================
+CORES
+========================= */
+
+:root{
+--azul:#0b1f3a;
+--azul-claro:#14355f;
+--dourado:#caa65a;
+--cinza:#f7f7f7;
+--texto:#333;
+--branco:#fff;
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+background:#fff;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.topbar{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+text-decoration:none;
+color:var(--azul);
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:var(--azul);
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--dourado);
+}
+
+/* =========================
+HERO TOPO
+========================= */
+
+.hero{
+position:relative;
+min-height:650px;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.hero-image{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+display:block;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.35);
+z-index:1;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:900px;
+text-align:center;
+color:#fff;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:3rem;
+color:#fff;
+margin-bottom:15px;
+}
+
+.hero-content h2{
+font-size:1.5rem;
+color:#fff;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:1.1rem;
+color:#fff;
+margin-bottom:30px;
+}
+/* =========================
+BOTÕES PROFISSIONAIS
+========================= */
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn,
+.btn-secondary,
+.btn-consultoria{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:220px;
+padding:16px 30px;
+border-radius:50px;
+font-size:16px;
+font-weight:700;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn{
+background:#caa65a;
+color:#fff;
+border:2px solid #caa65a;
+}
+
+.btn:hover{
+background:#b89244;
+transform:translateY(-3px);
+}
+
+.btn-secondary{
+background:#fff;
+color:#0b1f3a;
+border:2px solid #fff;
+}
+
+.btn-secondary:hover{
+background:#f2f2f2;
+transform:translateY(-3px);
+}
+
+.btn-consultoria{
+background:#0b1f3a;
+color:#fff;
+}
+
+/* =========================
+SEÇÕES
+========================= */
+
+section{
+padding:80px 20px;
+}
+
+section h2{
+text-align:center;
+color:var(--azul);
+margin-bottom:20px;
+font-size:2rem;
+}
+
+section h3{
+color:var(--azul);
+margin-bottom:15px;
+}
+
+section p{
+margin-bottom:15px;
+}
+
+/* =========================
+CARDS TRATAMENTOS
+========================= */
+
+.categorias{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.card h3{
+text-align:center;
+padding:20px;
+}
+
+/* =========================
+SOBRE
+========================= */
+
+.sobre{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.sobre img{
+width:100%;
+border-radius:20px;
+}
+
+.sobre-texto h2{
+text-align:left;
+}
+
+/* =========================
+FITOTERAPIA
+========================= */
+
+.fitoterapia{
+background:var(--cinza);
+}
+
+.fitoterapia-conteudo{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.fitoterapia img{
+width:100%;
+border-radius:20px;
+}
+
+/* =========================
+CONSULTORIA
+========================= */
+
+.consultoria-box{
+max-width:1000px;
+margin:auto;
+text-align:center;
+}
+
+.consultoria-box ul{
+margin:30px auto;
+max-width:600px;
+text-align:left;
+}
+
+.consultoria-box li{
+margin-bottom:10px;
+}
+
+/* =========================
+DEPOIMENTOS
+========================= */
+
+.carousel{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+.carousel-track{
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation:depoimentosSlide 90s linear infinite;
+}
+
+.carousel-track:hover{
+    animation-play-state:paused;
+}
+
+.carousel-track img{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    flex-shrink:0;
+}
+
+@keyframes depoimentosSlide{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-50%);
+    }
+
+}
+/* =========================
+FAQ
+========================= */
+
+.faq-item{
+max-width:1000px;
+margin:20px auto;
+padding:25px;
+background:#fff;
+border-left:5px solid var(--dourado);
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+border-radius:10px;
+}
+
+.faq-item p{
+    display:none;
+}
+
+/* =========================
+CONTATO
+========================= */
+
+.contato-grid{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
+max-width:1200px;
+margin:auto;
+}
+
+.formulario form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,
+textarea,
+select{
+width:100%;
+padding:15px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:16px;
+}
+
+textarea{
+min-height:120px;
+}
+
+button{
+border:none;
+cursor:pointer;
+background:var(--azul);
+color:#fff;
+padding:15px;
+border-radius:10px;
+font-size:16px;
+transition:.3s;
+}
+
+button:hover{
+background:var(--azul-claro);
+}
+
+.contato-info{
+background:var(--cinza);
+padding:30px;
+border-radius:15px;
+}
+
+/* =========================
+BLOG
+========================= */
+
+.blog-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.blog-card{
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.blog-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.blog-card-content{
+padding:20px;
+}
+
+/* =========================
+BUSCA
+========================= */
+
+.search-box{
+max-width:700px;
+margin:30px auto;
+}
+
+.search-box input{
+width:100%;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:var(--azul);
+color:#fff;
+text-align:center;
+padding:60px 20px;
+}
+
+footer h2{
+color:#fff;
+margin-bottom:20px;
+}
+
+footer p{
+margin-bottom:10px;
+}
+
+/* =========================
+RESPONSIVO TABLET
+========================= */
+
+@media(max-width:991px){
+
+```
+.sobre,
+.fitoterapia-conteudo,
+.contato-grid{
+    grid-template-columns:1fr;
+}
+
+nav ul{
+    gap:15px;
+}
+```
+
+}
+
+/* =========================
+RESPONSIVO MOBILE
+========================= */
+
+@media(max-width:768px){
+
+```
+.topbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-content h1{
+    font-size:2rem;
+}
+
+.hero-content h2{
+    font-size:1.1rem;
+}
+
+section{
+    padding:60px 15px;
+}
+```
+
+}
+
+/* =========================
+IMAGENS SEO
+========================= */
+
+img{
+max-width:100%;
+height:auto;
+display:block;
+}
+
+/* =========================
+SEO HIDDEN
+========================= */
+
+.seo-hidden{
+position:absolute;
+left:-9999px;
+}
+/* =========================
+SEÇÃO CIDADES (SEO + CONVERSÃO)
+========================= */
+
+.cities-section{
+padding:60px 20px;
+background:#f8f8f8;
+text-align:center;
+}
+
+.cities-subtitle{
+margin-bottom:30px;
+color:#555;
+font-size:16px;
+}
+
+.cities-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.city-card{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.city-card:hover{
+transform:translateY(-5px);
+}
+
+.city-card h3{
+margin-bottom:10px;
+}
+
+.city-card p{
+font-size:14px;
+color:#666;
+margin-bottom:15px;
+}
+
+.city-btn{
+display:inline-block;
+padding:10px 15px;
+background:#111;
+color:#fff;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+transition:.3s;
+}
+
+.city-btn:hover
+
+/* =========================
+SEO LOCAL
+========================= */
+
+.seo-local{
+    max-width:1100px;
+    margin:0 auto;
+    padding:60px 20px;
+}
+
+.seo-local h2{
+    color:var(--azul);
+    margin-top:40px;
+    margin-bottom:15px;
+    text-align:left;
+}
+
+.seo-local p{
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+/* =========================
+MELASMA POR REGIÃO
+========================= */
+
+.melasma-locais{
+padding:60px 20px;
+text-align:center;
+}
+
+.melasma-locais h2{
+margin-bottom:20px;
+}
+
+.melasma-texto{
+max-width:900px;
+margin:0 auto 40px;
+line-height:1.8;
+}
+
+.melasma-links{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.melasma-card{
+width:260px;
+padding:30px 25px;
+background:#fff;
+border-radius:20px;
+text-decoration:none;
+color:#0d2c54;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:all .3s ease;
+}
+
+.melasma-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.melasma-card h3{
+margin:0 0 10px;
+font-size:24px;
+color:#0d2c54;
+}
+
+.melasma-card p{
+margin:0;
+color:#555;
+font-size:15px;
+line-height:1.5;
+}
+
+/* =========================
+PÁGINAS DE ACNE
+========================= */
+
+.acne-hero{
+padding:100px 20px;
+background:linear-gradient(135deg,#f7f8fa,#eef2f8);
+text-align:center;
+}
+
+.acne-hero h1{
+font-size:48px;
+color:#0f2747;
+margin-bottom:20px;
+}
+
+.acne-hero p{
+max-width:900px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+}
+
+.btn-acne{
+display:inline-block;
+padding:18px 38px;
+background:linear-gradient(135deg,#caa45d,#e5c78a);
+color:#1f1f1f;
+text-decoration:none;
+border-radius:50px;
+font-weight:700;
+font-size:1rem;
+transition:all .3s ease;
+box-shadow:0 10px 25px rgba(202,164,93,.35);
+}
+
+.btn-acne:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(202,164,93,.45);
+}
+
+.acne-content{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.acne-content h2{
+color:#0f2747;
+font-size:38px;
+margin-bottom:25px;
+}
+
+.acne-content p{
+font-size:19px;
+line-height:1.9;
+margin-bottom:20px;
+}
+
+.processo{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.processo-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.processo-card h3{
+color:#0f2747;
+}
+
+.antes-depois{
+padding:80px 20px;
+background:#f7f8fa;
+text-align:center;
+}
+
+.galeria-acne{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.galeria-acne img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.cta-final{
+text-align:center;
+padding:100px 20px;
+background:#0f2747;
+color:#fff;
+}
+
+.cta-final h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.faq-acne{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+}
+
+.faq-acne .faq-item{
+margin-bottom:30px;
+}
+
+.faq-item h3{
+color:#0f2747;
+}
+
+.hero-acne{
+padding:100px 20px;
+text-align:center;
+background:#f8f8f8;
+}
+
+.container-acne,
+.problemas-comuns,
+.antes-depois,
+.processo,
+.regioes,
+.links-relacionados,
+#faq{
+max-width:1200px;
+margin:auto;
+padding:70px 20px;
+}
+
+.cards-problemas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.problema-card{
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+/* =========================
+CARD CLICÁVEL
+========================= */
+
+.card-link{
+display:block;
+text-decoration:none;
+color:inherit;
+}
+
+.card-link:hover .problema-card{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.problema-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+cursor:pointer;
+}
+
+.problema-card:hover{
+transform:translateY(-5px);
+}
+
+.problema-card h3{
+margin-bottom:15px;
+}
+
+/* =========================
+GALERIA ANTES E DEPOIS
+========================= */
+
+.galeria-acne{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.caso-acne{
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.caso-acne img{
+width:100%;
+border-radius:16px;
+}
+
+/* =========================
+ETAPAS
+========================= */
+
+.etapas{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.etapa{
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+/* =========================
+REGIÕES
+========================= */
+
+.lista-cidades{
+margin-top:20px;
+}
+
+.lista-cidades li{
+margin-bottom:10px;
+}
+
+.regioes-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:35px;
+}
+
+.regiao-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+text-decoration:none;
+color:#333;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.regiao-card:hover{
+transform:translateY(-5px);
+}
+
+.regiao-card span{
+display:block;
+margin-top:15px;
+font-weight:700;
+color:#caa45d;
+}
+
+/* =========================
+AUTORIDADE
+========================= */
+
+.autoridade-box{
+display:flex;
+align-items:center;
+gap:50px;
+margin-bottom:80px;
+}
+
+.autoridade-img{
+flex:1;
+}
+
+.autoridade-img img{
+width:100%;
+max-width:450px;
+border-radius:20px;
+margin:auto;
+}
+
+.autoridade-texto{
+flex:1;
+}
+
+.autoridade-texto h2{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.autoridade-texto ul{
+padding-left:20px;
+margin-top:25px;
+}
+
+.autoridade-texto li{
+margin-bottom:12px;
+}
+
+@media(max-width:900px){
+
+```
+.autoridade-box{
+    flex-direction:column;
+}
+```
+
+}
+
+/* =========================
+ANTES E DEPOIS
+========================= */
+
+.antes-depois-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:40px;
+margin-top:40px;
+}
+
+.antes-card{
+background:#fff;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.antes-card img{
+width:100%;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.antes-depois-texto{
+text-align:center;
+max-width:800px;
+margin:auto;
+}
+
+/* =========================
+CTA PREMIUM
+========================= */
+
+.cta-box{
+max-width:900px;
+margin:auto;
+text-align:center;
+background:linear-gradient(135deg,#1f4e79,#2d6da3);
+padding:60px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+color:#fff;
+}
+
+.cta-box h2{
+color:#fff;
+font-size:2.3rem;
+margin-bottom:20px;
+}
+
+.cta-box p{
+color:#fff;
+font-size:1.15rem;
+line-height:1.8;
+max-width:700px;
+margin:0 auto;
+}
+
+.btn-whatsapp-final,
+.btn-whatsapp-premium{
+display:inline-block;
+margin-top:25px;
+padding:18px 40px;
+background:#caa45d;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn-whatsapp-final:hover,
+.btn-whatsapp-premium:hover{
+transform:translateY(-3px);
+}
+
+/* =========================
+FAQ
+========================= */
+
+.faq-box{
+max-width:900px;
+margin:40px auto 0;
+}
+
+.faq-box h3{
+margin-top:35px;
+}
+
+/* =========================
+FOOTER ACNE
+========================= */
+
+.footer-acne{
+margin-top:80px;
+padding:70px 20px;
+text-align:center;
+background:#1f4e79;
+color:#fff;
+}
+
+.footer-acne h2{
+color:#fff;
+margin-bottom:20px;
+}
+
+.footer-acne p{
+color:#fff;
+max-width:900px;
+margin:10px auto;
+}
+/* =========================
+   ANIMAÇÃO AO ROLAR
+========================= */
+
+.card,
+.faq-item,
+.sobre,
+.fitoterapia,
+.consultoria-box{
+
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .6s ease;
+
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
