@@ -836,31 +836,37 @@ Cada plano é desenvolvido de forma individualizada, considerando o histórico d
 
       <form id="formContato">
 
-        <input type="text" id="nome" placeholder="Nome" required>
+  <label for="nome">Nome</label>
+  <input type="text" id="nome" placeholder="Nome" required>
 
-        <input type="tel" id="telefone" placeholder="WhatsApp" required>
+  <label for="telefone">WhatsApp</label>
+  <input type="tel" id="telefone" placeholder="WhatsApp" required>
 
-        <select id="objetivo">
-          <option>Agendar Limpeza de Pele Nanotecnológica</option>
-          <option>Consulta Facial / Melasma</option>
-          <option>Consulta Facial / Acne</option>
-          <option>Remoção de Verrugas e Acrocórdons</option>
-          <option>Consultoria Online</option>
-          <option>Consulta Corporal</option>
-          <option>Consulta Capilar</option>
-        </select>
+  <label for="objetivo">Objetivo do atendimento</label>
+  <select id="objetivo">
+    <option>Agendar Limpeza de Pele Nanotecnológica</option>
+    <option>Consulta Facial / Melasma</option>
+    <option>Consulta Facial / Acne</option>
+    <option>Remoção de Verrugas e Acrocórdons</option>
+    <option>Consultoria Online</option>
+    <option>Consulta Corporal</option>
+    <option>Consulta Capilar</option>
+  </select>
 
-        <select id="unidade">
-          <option>Araruama</option>
-          <option>Cabo Frio</option>
-          <option>Copacabana</option>
-        </select>
+  <label for="unidade">Unidade</label>
+  <select id="unidade">
+    <option>Araruama</option>
+    <option>Cabo Frio</option>
+    <option>Copacabana</option>
+  </select>
 
-        <textarea id="mensagem" maxlength="250" placeholder="Conte-me um pouco do que você precisa"></textarea>
+  <label for="mensagem">Mensagem</label>
+  <textarea id="mensagem" maxlength="250"
+    placeholder="Conte-me um pouco do que você precisa"></textarea>
 
-        <button type="submit">Quero Conversar</button>
+  <button type="submit">Quero Conversar</button>
 
-      </form>
+</form>
 
     </div>
 
