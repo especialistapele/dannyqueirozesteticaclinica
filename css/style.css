@@ -1156,3 +1156,7 @@ margin:10px auto;
   margin-bottom: 10px;
   font-size: 18px;
 }
+#formContato label {
+  position: absolute;
+  left: -9999px;
+}
