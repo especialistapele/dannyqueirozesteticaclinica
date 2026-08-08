@@ -1485,7 +1485,109 @@ event_label:city
 
 
 
+<!-- =========================
+     SKINMAP FLOATING CARD
+========================== -->
 
+<a href="skinmap.html"
+   class="skinmap-floating"
+   id="skinmapFloating">
+
+    <!-- Botão Fechar -->
+
+    <div
+        class="skinmap-close"
+        id="skinmapClose"
+        aria-label="Fechar">
+
+        ✕
+
+    </div>
+
+    <!-- Ícone -->
+
+    <div class="skinmap-icon">
+
+        ✨
+
+    </div>
+
+    <!-- Conteúdo -->
+
+    <div class="skinmap-content">
+
+        <small>
+
+            Descubra seu perfil de pele
+        </small>
+
+        <strong>
+
+            Diagnóstico SkinMap da Pele
+
+        </strong>
+
+        <p>
+
+            Em poucos minutos você recebe
+            uma análise inicial personalizada
+            baseada em ciência regenerativa.
+
+        </p>
+
+        <span>
+
+            Gratuito
+
+        </span>
+
+    </div>
+
+</a>
+<script>
+
+const skinmap = document.getElementById("skinmapFloating");
+const closeButton = document.getElementById("skinmapClose");
+
+/*
+Mostra somente se o usuário ainda não fechou
+*/
+
+if(localStorage.getItem("skinmap-card") === "closed"){
+
+    skinmap.style.display="none";
+
+}else{
+
+    skinmap.style.opacity="0";
+    skinmap.style.transform="translateX(80px)";
+
+    setTimeout(function(){
+
+        skinmap.style.opacity="1";
+        skinmap.style.transform="translateX(0)";
+
+    },5000);
+
+}
+
+/*
+Fechar Card
+*/
+
+closeButton.addEventListener("click",function(e){
+
+    e.preventDefault();
+
+    e.stopPropagation();
+
+    skinmap.style.display="none";
+
+    localStorage.setItem("skinmap-card","closed");
+
+});
+
+</script>
 
 </body>
 
