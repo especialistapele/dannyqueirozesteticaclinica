@@ -40,6 +40,18 @@
         <priority>0.8</priority>
     </url>
 
+    <!-- FERRAMENTA - SKINMAP REGENERATIVO -->
+    <!-- Apenas a página de entrada é indexável. skinmapinicio.html,
+         assessment.html, result.html e consultation.html dependem de
+         dados de sessão (localStorage) e não devem entrar no sitemap,
+         assim como não se indexa uma página de checkout. -->
+
+    <url>
+        <loc>https://dannyqueiroz.com.br/skinmap.html</loc>
+        <lastmod>2026-08-08</lastmod>
+        <priority>0.9</priority>
+    </url>
+
     <!-- PÁGINAS LOCAIS - ACNE -->
 
     <url>
