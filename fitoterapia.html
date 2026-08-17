@@ -235,6 +235,23 @@ toggle.addEventListener('click', () => {
 });
 </script>
 
+<script>
+document.querySelectorAll('.faq-item h3').forEach((pergunta) => {
+  pergunta.addEventListener('click', () => {
+    const item = pergunta.parentElement;
+    const jaAberto = item.classList.contains('active');
+
+    document.querySelectorAll('.faq-item').forEach((outro) => {
+      outro.classList.remove('active');
+    });
+
+    if (!jaAberto) {
+      item.classList.add('active');
+    }
+  });
+});
+</script>
+
 <script type="application/ld+json">
 {
  "@context":"https://schema.org",
